@@ -6,7 +6,7 @@ Scholampia adalah platform berbasis web yang dirancang sebagai pusat informasi d
 ## 2. Latar Belakang & Masalah
 Maraknya penyelenggaraan beasiswa dan perlombaan palsu/bodong yang bertujuan meraih popularitas (marketing trick), memungut biaya pendaftaran tanpa kejelasan, hingga transparansi pemenang yang meragukan (seperti kuota pemenang tidak rasional atau penarikan biaya sertifikat tersembunyi).
 
-* Solusi & Fitur Utama
+* **Solusi & Fitur Utama**
 **Layanan Gratis (Akses Umum)**
 - Katalog Terverifikasi: Informasi beasiswa dan perlombaan yang telah melalui proses validasi.
 - Edukasi Anti-Scam: Panduan dan literasi untuk mendeteksi indikasi penipuan secara mandiri.
