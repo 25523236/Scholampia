@@ -7,13 +7,13 @@ Scholampia adalah platform berbasis web yang dirancang sebagai pusat informasi d
 Maraknya penyelenggaraan beasiswa dan perlombaan palsu/bodong yang bertujuan meraih popularitas (marketing trick), memungut biaya pendaftaran tanpa kejelasan, hingga transparansi pemenang yang meragukan (seperti kuota pemenang tidak rasional atau penarikan biaya sertifikat tersembunyi).
 
 * Solusi & Fitur Utama
-- Layanan Gratis (Akses Umum):
---> Katalog Terverifikasi: Informasi beasiswa dan perlombaan yang telah melalui proses validasi.
---> Edukasi Anti-Scam: Panduan dan literasi untuk mendeteksi indikasi penipuan secara mandiri.
+**Layanan Gratis (Akses Umum)**
+- Katalog Terverifikasi: Informasi beasiswa dan perlombaan yang telah melalui proses validasi.
+- Edukasi Anti-Scam: Panduan dan literasi untuk mendeteksi indikasi penipuan secara mandiri.
 
-- Layanan Premium (Subscription):
---> Analisis Risk Score berbasis AI: Fitur penelaahan kriteria beasiswa/lomba secara otomatis untuk mengukur probabilitas keabsahan program (persentase risiko scam).
---> Mentorship Eksklusif: Sesi bimbingan langsung bersama pihak penyelenggara, alumni, maupun pemenang beasiswa/lomba periode sebelumnya.
+**Layanan Premium (Subscription):**
+- Analisis Risk Score berbasis AI: Fitur penelaahan kriteria beasiswa/lomba secara otomatis untuk mengukur probabilitas keabsahan program (persentase risiko scam).
+- Mentorship Eksklusif: Sesi bimbingan langsung bersama pihak penyelenggara, alumni, maupun pemenang beasiswa/lomba periode sebelumnya.
 
 ## 3. Pelaku (Aktor / Pengguna)
 * **Pengguna Umum (Guest/Free User):** Mahasiswa atau pelajar yang mencari katalog informasi beasiswa/lomba terverifikasi dan mengakses artikel edukasi anti-scam.
