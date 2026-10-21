@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scholampia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10.2"/><circle cx="12" cy="9.5" r="3.6"/><path d="M5.2 18.6c1.6-3 4-4.4 6.8-4.4s5.2 1.4 6.8 4.4"/></symbol>
+  </svg>
+  <div class="canvas">
+    <section class="screen " id="profil" aria-label="Profil">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="logo">SCHOLAMPIA</div>
+          <div class="search"><svg class="icon"><use href="#i-search"/></svg>Search</div>
+          <a class="user-pill" href="#"><svg class="icon"><use href="#i-user"/></svg>Profil</a>
+        </div>
+        <nav class="nav"><a href="#">Dashboard</a><a href="#">Lomba</a><a href="#">Beasiswa</a><a href="#">Edukasi Anti-Scam</a><a href="#">Cek Keaslian</a><a href="#">Mentorship</a></nav>
+      </header>
+      <main class="content">
+        <h1 class="page-title">Profil</h1>
+        <p class="page-sub">Kelola data diri dan minat agar rekomendasi lebih tepat.</p>
+        <div class="profil-grid">
+          <div class="card profil-card">
+            <div class="profil-user"><div class="avatar"><svg class="icon"><use href="#i-user"/></svg></div><h2>[Nama pengguna]</h2></div>
+            <div class="field"><span>Nama Lengkap</span><div class="input"></div></div>
+            <div class="field"><span>Email</span><div class="input"></div></div>
+            <div class="field"><span>Jenjang pendidikan</span><div class="input"></div></div>
+            <div class="field"><span>Kata sandi</span><div class="input"></div></div>
+            <a class="btn" href="#">Simpan perubahan</a>
+          </div>
+          <div class="profil-side">
+            <div class="card paket-card">
+              <div class="card-title" style="font-size:18px">Paket</div>
+              <p>Saat ini: [Gratis / Premium]</p>
+              <a class="btn small" href="#">Upgrade ke premium</a>
+            </div>
+            <div class="card riwayat-card">
+              <div class="card-title">Riwayat cek AI</div>
+              <div class="row"><span>[Nama Lomba]</span><span>[Tanggal]</span></div><div class="row"><span>[Nama Beasiswa]</span><span>[Tanggal]</span></div><div class="row"><span>[Nama Lomba]</span><span>[Tanggal]</span></div>
+            </div>
+            <a class="btn outline" href="#">Keluar</a>
+          </div>
+        </div>
+      </main>
+    </section>
+    <section class="screen " id="detail-lomba" aria-label="Detail lomba">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="logo">SCHOLAMPIA</div>
+          <div class="search"><svg class="icon"><use href="#i-search"/></svg>Search</div>
+          <a class="user-pill" href="#"><svg class="icon"><use href="#i-user"/></svg>Masuk</a>
+        </div>
+        <nav class="nav"><a href="#">Dashboard</a><a href="#">Lomba</a><a href="#">Beasiswa</a><a href="#">Edukasi Anti-Scam</a><a href="#">Cek Keaslian</a><a href="#">Mentorship</a></nav>
+      </header>
+      <main class="content" style="padding-top:34px">
+        <a class="back-link" href="#">Kembali ke lomba</a>
+        <h1 class="detail-title">[Nama lomba]</h1>
+        <p class="detail-by">Penyelenggara: [Nama penyelenggara]</p>
+        <div class="detail-grid">
+          <div class="detail-col">
+            <div class="card detail-card detail-desc"><div class="card-title">Deskripsi</div><p>[Deskripsi lengkap lomba]</p></div>
+            <div class="card detail-card detail-steps"><div class="card-title">Tata cara pendaftaran</div><ol><li>[Langkah 1]</li><li>[Langkah 2]</li><li>[Langkah 3]</li></ol></div>
+          </div>
+          <div class="card summary-card">
+            <div class="card-title">Ringkasan</div>
+            <div class="row"><span>Kategori</span><span>[Kategori]</span></div><div class="row"><span>Jenjang</span><span>[Jenjang]</span></div><div class="row"><span>Biaya pendaftaran</span><span>[Gratis / Rp]</span></div><div class="row"><span>Batas daftar</span><span>[Tanggal]</span></div><div class="row"><span>Pengumuman</span><span>[Tanggal]</span></div>
+            <a class="btn" href="#">Daftar</a>
+          </div>
+        </div>
+      </main>
+    </section>
+    <section class="screen " id="detail-beasiswa" aria-label="Detail beasiswa">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="logo">SCHOLAMPIA</div>
+          <div class="search"><svg class="icon"><use href="#i-search"/></svg>Search</div>
+          <a class="user-pill" href="#"><svg class="icon"><use href="#i-user"/></svg>Masuk</a>
+        </div>
+        <nav class="nav"><a href="#">Dashboard</a><a href="#">Lomba</a><a href="#">Beasiswa</a><a href="#">Edukasi Anti-Scam</a><a href="#">Cek Keaslian</a><a href="#">Mentorship</a></nav>
+      </header>
+      <main class="content" style="padding-top:34px">
+        <a class="back-link" href="#">Kembali ke beasiswa</a>
+        <h1 class="detail-title">[Nama beasiswa]</h1>
+        <p class="detail-by">Penyelenggara: [Nama penyelenggara]</p>
+        <div class="detail-grid">
+          <div class="detail-col">
+            <div class="card detail-card detail-desc"><div class="card-title">Deskripsi</div><p>[Deskripsi lengkap beasiswa]</p></div>
+            <div class="card detail-card detail-steps"><div class="card-title">Tata cara pendaftaran</div><ol><li>[Langkah 1]</li><li>[Langkah 2]</li><li>[Langkah 3]</li></ol></div>
+          </div>
+          <div class="card summary-card">
+            <div class="card-title">Ringkasan</div>
+            <div class="row"><span>Jenis bantuan</span><span>[Dana / Materi / Kombinasi]</span></div><div class="row"><span>Jenjang</span><span>[Jenjang]</span></div><div class="row"><span>Persyaratan utama</span><span>[Ringkasan]</span></div><div class="row"><span>Batas daftar</span><span>[Tanggal]</span></div><div class="row"><span>Pengumuman</span><span>[Tanggal]</span></div>
+            <a class="btn" href="#">Daftar</a>
+          </div>
+        </div>
+      </main>
+    </section>
+    <section class="screen " id="pilih-paket" aria-label="Pilih paket">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="logo">SCHOLAMPIA</div>
+          <div class="search"><svg class="icon"><use href="#i-search"/></svg>Search</div>
+          <a class="user-pill" href="#"><svg class="icon"><use href="#i-user"/></svg>Masuk</a>
+        </div>
+        <nav class="nav"><a href="#">Dashboard</a><a href="#">Lomba</a><a href="#">Beasiswa</a><a href="#">Edukasi Anti-Scam</a><a href="#">Cek Keaslian</a><a href="#">Mentorship</a></nav>
+      </header>
+      <main class="content">
+        <h1 class="page-title">Pilih paket</h1>
+        <p class="page-sub">Buka analisis AI dan mentorship untuk lebih aman dan siap mendaftar.</p>
+        <div class="plans">
+          <div class="card plan">
+            <h3>Gratis</h3>
+            <div class="price">Rp.0</div>
+            <ul><li>Info lomba dan beasiswa terverifikasi</li><li>Edukasi anti-scam</li><li>Simpan peluang</li></ul>
+            <a class="btn outline" href="#">Paket saat ini</a>
+          </div>
+          <div class="card plan premium">
+            <h3>Premium</h3>
+            <div class="price">Rp.20.000</div>
+            <ul><li>Semua fitur Gratis</li><li>Cek keaslian dengan AI</li><li>Sesi mentorship</li></ul>
+            <a class="btn" href="#">Beli premium</a>
+          </div>
+        </div>
+      </main>
+    </section>
+    <section class="screen " id="dashboard" aria-label="Dashboard">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="logo">SCHOLAMPIA</div>
+          <div class="search"><svg class="icon"><use href="#i-search"/></svg>Search</div>
+          <a class="user-pill" href="#"><svg class="icon"><use href="#i-user"/></svg>Masuk</a>
+        </div>
+        <nav class="nav"><a href="#">Dashboard</a><a href="#">Lomba</a><a href="#">Beasiswa</a><a href="#">Edukasi Anti-Scam</a><a href="#">Cek Keaslian</a><a href="#">Mentorship</a></nav>
+      </header>
+      <main class="content">
+        <h1 class="page-title">Halo, [Pengguna]</h1>
+        <p class="page-sub" style="max-width:560px">Selamat datang di Scholampia — portal terpercaya untuk menemukan beragam peluang beasiswa dan kompetisi terbaik demi meraih masa depan impian Anda.</p>
+        <div class="stats">
+          <div class="card stat"><small>Lomba tersimpan</small><strong>0</strong></div>
+          <div class="card stat"><small>Beasiswa tersimpan</small><strong>0</strong></div>
+          <div class="card stat"><small>Riwayat cek AI</small><strong>0</strong></div>
+          <div class="card stat"><small>Sesi mentorship</small><strong>0</strong></div>
+        </div>
+        <div class="dash-grid">
+          <div class="card dash-card"><div class="card-title">Tenggat Terdekat</div><div class="row"><span>[Nama Lomba]</span><span>[Tanggal]</span></div><div class="row"><span>[Nama Beasiswa]</span><span>[Tanggal]</span></div><div class="row"><span>[Nama Lomba]</span><span>[Tanggal]</span></div></div>
+          <div class="card dash-card"><div class="card-title">Rekomendasi untukmu</div><div class="row"><span>[Nama Lomba]</span><span>[Sesuai Bidang]</span></div><div class="row"><span>[Nama Beasiswa]</span><span>[Sesuai Bidang]</span></div><div class="row"><span>[Nama Lomba]</span><span>[Sesuai Bidang]</span></div></div>
+        </div>
+        <div class="banner"><div><strong>Buka fitur Premium</strong><span>Analisis AI dan sesi mentorship.</span></div><a class="btn" href="#">Lihat paket</a></div>
+      </main>
+    </section>
+    <section class="screen " id="lomba" aria-label="Daftar lomba">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="logo">SCHOLAMPIA</div>
+          <div class="search"><svg class="icon"><use href="#i-search"/></svg>Search</div>
+          <a class="user-pill" href="#"><svg class="icon"><use href="#i-user"/></svg>Masuk</a>
+        </div>
+        <nav class="nav"><a href="#">Dashboard</a><a href="#">Lomba</a><a href="#">Beasiswa</a><a href="#">Edukasi Anti-Scam</a><a href="#">Cek Keaslian</a><a href="#">Mentorship</a></nav>
+      </header>
+      <main class="content">
+        <h1 class="page-title">Lomba</h1>
+        <p class="page-sub">Cari lomba yang sudah diverifikasi tim kami.</p>
+        <div class="list-layout">
+          <aside class="card filter"><h4>Filter</h4><div class="group">Kategori</div><label><span class="checkbox"></span>Sains dan teknologi</label><label><span class="checkbox"></span>Seni dan desain</label><label><span class="checkbox"></span>Bisnis</label><label><span class="checkbox"></span>Olahraga</label><div class="group">Jenjang</div><label><span class="checkbox"></span>SMA/SMK</label><label><span class="checkbox"></span>Mahasiswa</label><label><span class="checkbox"></span>Umum</label><div class="group">Biaya pendaftaran</div><label><span class="checkbox"></span>Gratis</label><label><span class="checkbox"></span>Berbayar</label></aside>
+          <div class="items">
+            <article class="card item">
+              <div class="tags"><span class="tag solid">Terverifikasi</span><span class="tag">Lomba</span></div>
+              <h3>[Nama Lomba]</h3>
+              <p>Penyelenggara: [Nama] · Batas daftar: [Tanggal]</p>
+              <p>Syarat: [Persyaratan singkat] · Cara daftar: [Langkah singkat]</p>
+              <div class="actions"><a class="btn small" href="#">Lihat detail</a><a class="btn small outline" href="#">Simpan</a></div>
+            </article>
+            <article class="card item">
+              <div class="tags"><span class="tag solid">Terverifikasi</span><span class="tag">Lomba</span></div>
+              <h3>[Nama Lomba]</h3>
+              <p>Penyelenggara: [Nama] · Batas daftar: [Tanggal]</p>
+              <p>Syarat: [Persyaratan singkat] · Cara daftar: [Langkah singkat]</p>
+              <div class="actions"><a class="btn small" href="#">Lihat detail</a><a class="btn small outline" href="#">Simpan</a></div>
+            </article>
+            <article class="card item">
+              <div class="tags"><span class="tag solid">Terverifikasi</span><span class="tag">Lomba</span></div>
+              <h3>[Nama Lomba]</h3>
+              <p>Penyelenggara: [Nama] · Batas daftar: [Tanggal]</p>
+              <p>Syarat: [Persyaratan singkat] · Cara daftar: [Langkah singkat]</p>
+              <div class="actions"><a class="btn small" href="#">Lihat detail</a><a class="btn small outline" href="#">Simpan</a></div>
+            </article>
+          </div>
+        </div>
+      </main>
+    </section>
+    <section class="screen " id="beasiswa" aria-label="Daftar beasiswa">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="logo">SCHOLAMPIA</div>
+          <div class="search"><svg class="icon"><use href="#i-search"/></svg>Search</div>
+          <a class="user-pill" href="#"><svg class="icon"><use href="#i-user"/></svg>Masuk</a>
+        </div>
+        <nav class="nav"><a href="#">Dashboard</a><a href="#">Lomba</a><a href="#">Beasiswa</a><a href="#">Edukasi Anti-Scam</a><a href="#">Cek Keaslian</a><a href="#">Mentorship</a></nav>
+      </header>
+      <main class="content">
+        <h1 class="page-title">Beasiswa</h1>
+        <p class="page-sub">Bantuan dana, akses materi, atau kombinasi keduanya.</p>
+        <div class="list-layout">
+          <aside class="card filter"><h4>Filter</h4><div class="group">Jenis bantuan</div><label><span class="checkbox"></span>Bantuan dana</label><label><span class="checkbox"></span>Materi dan kursus edukasi</label><label><span class="checkbox"></span>Kombinasi dana dan materi</label><div class="group">Jenjang</div><label><span class="checkbox"></span>SMA/SMK</label><label><span class="checkbox"></span>S1</label><label><span class="checkbox"></span>S2/S3</label><div class="group">Status</div><label><span class="checkbox"></span>Pendaftaran dibuka</label><label><span class="checkbox"></span>Segera ditutup</label></aside>
+          <div class="items">
+            <article class="card item">
+              <div class="tags"><span class="tag solid">Terverifikasi</span><span class="tag">Beasiswa</span></div>
+              <h3>[Nama Beasiswa]</h3>
+              <p>Penyelenggara: [Nama] · Batas daftar: [Tanggal]</p>
+              <p>Syarat: [Persyaratan singkat] · Cara daftar: [Langkah singkat]</p>
+              <div class="actions"><a class="btn small" href="#">Lihat detail</a><a class="btn small outline" href="#">Simpan</a></div>
+            </article>
+            <article class="card item">
+              <div class="tags"><span class="tag solid">Terverifikasi</span><span class="tag">Beasiswa</span></div>
+              <h3>[Nama Beasiswa]</h3>
+              <p>Penyelenggara: [Nama] · Batas daftar: [Tanggal]</p>
+              <p>Syarat: [Persyaratan singkat] · Cara daftar: [Langkah singkat]</p>
+              <div class="actions"><a class="btn small" href="#">Lihat detail</a><a class="btn small outline" href="#">Simpan</a></div>
+            </article>
+            <article class="card item">
+              <div class="tags"><span class="tag solid">Terverifikasi</span><span class="tag">Beasiswa</span></div>
+              <h3>[Nama Beasiswa]</h3>
+              <p>Penyelenggara: [Nama] · Batas daftar: [Tanggal]</p>
+              <p>Syarat: [Persyaratan singkat] · Cara daftar: [Langkah singkat]</p>
+              <div class="actions"><a class="btn small" href="#">Lihat detail</a><a class="btn small outline" href="#">Simpan</a></div>
+            </article>
+          </div>
+        </div>
+      </main>
+    </section>
+    <section class="screen " id="edukasi" aria-label="Edukasi anti-scam">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="logo">SCHOLAMPIA</div>
+          <div class="search"><svg class="icon"><use href="#i-search"/></svg>Search</div>
+          <a class="user-pill" href="#"><svg class="icon"><use href="#i-user"/></svg>Masuk</a>
+        </div>
+        <nav class="nav"><a href="#">Dashboard</a><a href="#">Lomba</a><a href="#">Beasiswa</a><a href="#">Edukasi Anti-Scam</a><a href="#">Cek Keaslian</a><a href="#">Mentorship</a></nav>
+      </header>
+      <main class="content">
+        <h1 class="page-title">Edukasi anti-scam</h1>
+        <p class="page-sub">Kenali ciri lomba dan beasiswa bodong sebelum kamu mendaftar.</p>
+        <div class="edu-grid">
+          <div class="card edu-card"><h3>Pungutan biaya ilegal</h3><p>Pendaftaran gratis tiba-tiba meminta biaya administrasi atau transfer ke rekening pribadi.</p></div><div class="card edu-card"><h3>Sertifikat berbayar</h3><p>Kewajiban membayar hanya untuk mengklaim sertifikat atau plagiat.</p></div><div class="card edu-card"><h3>Pemenang tidak wajar</h3><p>Jumlah pemenang terlalu banyak, atau pemenang adalah orang dalam atau fiktif.</p></div><div class="card edu-card"><h3>Mengejar engagement</h3><p>Syarat wajib follow, like, dan share secara berlebihan demi menambah pengikut.</p></div><div class="card edu-card"><h3>Penyelenggara tidak jelas</h3><p>Tidak ada profil, kontak resmi, atau rekam jejak yang bisa dicek.</p></div><div class="card edu-card"><h3>Pungutan biaya ilegal</h3><p>Pendaftaran gratis tiba-tiba meminta biaya administrasi atau transfer ke rekening pribadi.</p></div>
+          <div class="card checklist">
+            <h3>Checklist sebelum mendaftar</h3>
+            <label><span class="checkbox"></span>Penyelenggara punya profil dan kontak resmi</label>
+            <label><span class="checkbox"></span>Pendaftaran tidak menuntut biaya yang tidak jelas</label>
+            <label><span class="checkbox"></span>Jumlah dan cara penentuan pemenang masuk akal</label>
+            <a class="btn" href="#">Cek dengan AI</a>
+          </div>
+        </div>
+      </main>
+    </section>
+    <section class="screen " id="cek-keaslian" aria-label="Cek keaslian">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="logo">SCHOLAMPIA</div>
+          <div class="search"><svg class="icon"><use href="#i-search"/></svg>Search</div>
+          <a class="user-pill" href="#"><svg class="icon"><use href="#i-user"/></svg>Masuk</a>
+        </div>
+        <nav class="nav"><a href="#">Dashboard</a><a href="#">Lomba</a><a href="#">Beasiswa</a><a href="#">Edukasi Anti-Scam</a><a href="#">Cek Keaslian</a><a href="#">Mentorship</a></nav>
+      </header>
+      <main class="content">
+        <h1 class="page-title">Cek keaslian lomba atau beasiswa</h1>
+        <p class="page-sub">Tempel tautan atau deskripsi, AI akan menandai indikator penipuan.</p>
+        <div class="cek-grid">
+          <div class="card cek-card">
+            <div class="field"><span>Tautan atau akun media sosial</span><div class="input"></div></div>
+            <div class="field"><span>Deskripsi atau syarat pendaftaran</span><div class="textarea"></div></div>
+            <div class="muted-note">Fitur premium</div>
+          </div>
+          <div class="card cek-card">
+            <span class="badge-risk">Risiko tinggi</span>
+            <h3>Indikator yang ditemukan</h3>
+            <ul>
+              <li>Biaya pendaftaran tidak wajar</li>
+              <li>Sertifikat hanya keluar setelah membayar</li>
+              <li>Jumlah pemenang tidak masuk akal</li>
+              <li>Fokus mengejar pengikut media sosial</li>
+            </ul>
+            <div class="warn">Hasil analisis AI bersifat rekomendasi dan bukan keputusan hukum formal. Laporkan jika kamu menemukan penipuan.</div>
+            <a class="btn outline" href="#">Lapor Admin</a>
+          </div>
+        </div>
+      </main>
+    </section>
+    <section class="screen " id="mentorship" aria-label="Mentorship">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="logo">SCHOLAMPIA</div>
+          <div class="search"><svg class="icon"><use href="#i-search"/></svg>Search</div>
+          <a class="user-pill" href="#"><svg class="icon"><use href="#i-user"/></svg>Masuk</a>
+        </div>
+        <nav class="nav"><a href="#">Dashboard</a><a href="#">Lomba</a><a href="#">Beasiswa</a><a href="#">Edukasi Anti-Scam</a><a href="#">Cek Keaslian</a><a href="#">Mentorship</a></nav>
+      </header>
+      <main class="content">
+        <h1 class="page-title">Mentorship lomba dan beasiswa</h1>
+        <p class="page-sub">Latihan bersama pemenang sebelumnya dan pihak penyelenggara.</p>
+        <div class="mentors"><div class="card mentor">
+            <div class="mentor-head"><div class="avatar"><svg class="icon"><use href="#i-user"/></svg></div><strong>[Nama Mentor]</strong></div>
+            <p>Pemenang [Nama Lomba]</p>
+            <p>[Keahlian dan topik bimbingan]</p>
+            <a class="btn" href="#">Jadwalkan sesi</a>
+          </div><div class="card mentor">
+            <div class="mentor-head"><div class="avatar"><svg class="icon"><use href="#i-user"/></svg></div><strong>[Nama Mentor]</strong></div>
+            <p>Pemenang [Nama Lomba]</p>
+            <p>[Keahlian dan topik bimbingan]</p>
+            <a class="btn" href="#">Jadwalkan sesi</a>
+          </div><div class="card mentor">
+            <div class="mentor-head"><div class="avatar"><svg class="icon"><use href="#i-user"/></svg></div><strong>[Nama Mentor]</strong></div>
+            <p>Pemenang [Nama Lomba]</p>
+            <p>[Keahlian dan topik bimbingan]</p>
+            <a class="btn" href="#">Jadwalkan sesi</a>
+          </div></div>
+      </main>
+    </section>
+    <section class="screen " id="masuk" aria-label="Masuk">
+      <div class="auth">
+        <div class="auth-left">
+          <div class="logo">SCHOLAMPIA</div>
+          <h2>Lomba dan beasiswa terpercaya, tanpa tipu-tipu.</h2>
+          <p>Masuk untuk menyimpan peluang, mengecek keaslian dengan AI, dan belajar bersama mentor.</p>
+        </div>
+        <div class="auth-right">
+          <form class="auth-form" onsubmit="return false">
+            <h1>Masuk</h1>
+            <div class="field"><span>Email</span><div class="input"></div></div>
+            <div class="field"><span>Kata sandi</span><div class="input"></div></div>
+            <a class="small-link" href="#">Lupa kata sandi?</a>
+            <a class="btn" href="#">Masuk</a>
+            <p class="switch">Belum punya akun? <a href="#">Daftar sekarang</a></p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="screen " id="daftar" aria-label="Daftar akun">
+      <div class="auth">
+        <div class="auth-left">
+          <div class="logo">SCHOLAMPIA</div>
+          <h2>Lomba dan beasiswa terpercaya, tanpa tipu-tipu.</h2>
+          <p>Masuk untuk menyimpan peluang, mengecek keaslian dengan AI, dan belajar bersama mentor.</p>
+        </div>
+        <div class="auth-right">
+          <form class="auth-form wide" onsubmit="return false">
+            <h1>Daftar akun</h1>
+            <p class="lead">Buat akun untuk menyimpan lomba dan beasiswa.</p>
+            <div class="field"><span>Nama lengkap</span><div class="input"></div></div>
+            <div class="field"><span>Email</span><div class="input"></div></div>
+            <div class="field"><span>Jenjang pendidikan</span><div class="input"></div></div>
+            <div class="field"><span>Kata sandi</span><div class="input"></div></div>
+            <div class="field"><span>Ulangi kata sandi</span><div class="input"></div></div>
+            <div class="terms"><span class="checkbox"></span><span>Saya setuju dengan <a href="#">syarat dan ketentuan.</a></span></div>
+            <a class="btn" href="#">Daftar sekarang</a>
+            <p class="switch">Sudah punya akun? <a href="#">Masuk sekarang</a></p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="screen forgot" id="lupa-kata-sandi" aria-label="Lupa kata sandi">
+      <div class="logo">SCHOLAMPIA</div>
+      <div class="card forgot-card">
+        <h2>Lupa kata sandi</h2>
+        <p>Masukkan email akunmu. Kami akan mengirim tautan untuk mengatur ulang kata sandi.</p>
+        <div class="field"><span>Email</span><div class="input"></div></div>
+        <a class="btn" href="#">Kirim tautan reset</a>
+        <a class="small-link" href="#">Kembali ke halaman masuk</a>
+      </div>
+    </section>
+    <section class="screen " id="jadwalkan-sesi" aria-label="Jadwalkan sesi">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="logo">SCHOLAMPIA</div>
+          <div class="search"><svg class="icon"><use href="#i-search"/></svg>Search</div>
+          <a class="user-pill" href="#"><svg class="icon"><use href="#i-user"/></svg>Masuk</a>
+        </div>
+        <nav class="nav"><a href="#">Dashboard</a><a href="#">Lomba</a><a href="#">Beasiswa</a><a href="#">Edukasi Anti-Scam</a><a href="#">Cek Keaslian</a><a href="#">Mentorship</a></nav>
+      </header>
+      <main class="content" style="padding-top:34px">
+        <a class="back-link" href="#">Kembali ke mentorship</a>
+        <h1 class="sesi-title">Jadwalkan sesi</h1>
+        <div class="sesi-grid">
+          <div class="card sesi-card">
+            <div class="sesi-mentor"><div class="avatar"><svg class="icon"><use href="#i-user"/></svg></div><strong>[Nama mentor]</strong></div>
+            <a class="sub-link" href="#">Pemenang [Nama lomba]</a>
+            <p class="topic">[Keahlian dan topik bimbingan]</p>
+          </div>
+          <div class="card sesi-card">
+            <div class="field"><span>Tanggal</span><div class="select"></div></div>
+            <div class="field"><span>Format sesi</span><div class="select"></div></div>
+            <div class="field"><span>Pilih jam</span>
+              <div class="slots">
+                <div class="slot selected"><span class="dot"></span>Jam 13.00 WIB</div>
+                <div class="slot"><span class="dot"></span>Jam 14.00 WIB</div>
+                <div class="slot"><span class="dot"></span>Jam 15.00 WIB</div>
+                <div class="slot"><span class="dot"></span>Jam 16.00 WIB</div>
+              </div>
+            </div>
+            <a class="btn" href="#">Konfirmasi sesi</a>
+            <span class="muted-note">Fitur premium</span>
+          </div>
+        </div>
+      </main>
+    </section>
+  </div>
+</body>
+</html>
