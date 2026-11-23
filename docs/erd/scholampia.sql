@@ -39,6 +39,8 @@ CREATE TABLE IF NOT EXISTS transaksi_langganan (
   CONSTRAINT fk_transaksi_user  FOREIGN KEY (id_user)  REFERENCES `user`(id_user),
   CONSTRAINT fk_transaksi_paket FOREIGN KEY (id_paket) REFERENCES paket_langganan(id_paket),
   CONSTRAINT chk_transaksi_status CHECK (status_pembayaran IN ('menunggu', 'berhasil', 'kedaluwarsa', 'gagal'))
+  CONSTRAINT chk_transaksi_metode CHECK (metode_pembayaran IN ('QRIS', 'Virtual Account')),
+  CONSTRAINT chk_transaksi_jumlah CHECK (jumlah_bayar >= 0),
 ) ENGINE=InnoDB;
 
 -- ---------- 4. penyelenggara ----------
