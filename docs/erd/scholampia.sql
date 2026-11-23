@@ -4,8 +4,6 @@ CREATE DATABASE IF NOT EXISTS scholampia
 USE scholampia;
 
 -- ---------- 1. user ----------
--- role: 'user' | 'admin'
--- Status premium TIDAK disimpan di sini, tetapi dihitung dari transaksi_langganan.
 CREATE TABLE IF NOT EXISTS `user` (
   id_user        INT AUTO_INCREMENT PRIMARY KEY,
   nama           VARCHAR(100) NOT NULL,
@@ -36,15 +34,14 @@ CREATE TABLE IF NOT EXISTS transaksi_langganan (
   tanggal_transaksi DATETIME      NOT NULL,
   tanggal_berakhir  DATE          NULL,
   status_pembayaran VARCHAR(20)   NOT NULL,
-  CONSTRAINT fk_transaksi_user  FOREIGN KEY (id_user)  REFERENCES `user`(id_user),
-  CONSTRAINT fk_transaksi_paket FOREIGN KEY (id_paket) REFERENCES paket_langganan(id_paket),
-  CONSTRAINT chk_transaksi_status CHECK (status_pembayaran IN ('menunggu', 'berhasil', 'kedaluwarsa', 'gagal'))
+  CONSTRAINT fk_transaksi_user    FOREIGN KEY (id_user)  REFERENCES `user`(id_user),
+  CONSTRAINT fk_transaksi_paket   FOREIGN KEY (id_paket) REFERENCES paket_langganan(id_paket),
+  CONSTRAINT chk_transaksi_status CHECK (status_pembayaran IN ('menunggu', 'berhasil', 'kedaluwarsa', 'gagal')),
   CONSTRAINT chk_transaksi_metode CHECK (metode_pembayaran IN ('QRIS', 'Virtual Account')),
-  CONSTRAINT chk_transaksi_jumlah CHECK (jumlah_bayar >= 0),
+  CONSTRAINT chk_transaksi_jumlah CHECK (jumlah_bayar >= 0)
 ) ENGINE=InnoDB;
 
 -- ---------- 4. penyelenggara ----------
--- Data lembaga/mentor diinput dan dikelola admin (tidak punya akun login)
 CREATE TABLE IF NOT EXISTS penyelenggara (
   id_penyelenggara    INT AUTO_INCREMENT PRIMARY KEY,
   nama_penyelenggara  VARCHAR(150) NOT NULL,
@@ -55,7 +52,7 @@ CREATE TABLE IF NOT EXISTS penyelenggara (
   foto_profil         VARCHAR(255) NULL,
   riwayat_pencapaian  TEXT         NULL,
   status_verifikasi   VARCHAR(20)  NOT NULL,
-  CONSTRAINT chk_penyelenggara_jenis CHECK (jenis_penyelenggara IN ('lembaga_resmi', 'alumni_pemenang')),
+  CONSTRAINT chk_penyelenggara_jenis  CHECK (jenis_penyelenggara IN ('lembaga_resmi', 'alumni_pemenang')),
   CONSTRAINT chk_penyelenggara_status CHECK (status_verifikasi IN ('menunggu', 'terverifikasi', 'ditolak'))
 ) ENGINE=InnoDB;
 
@@ -76,20 +73,19 @@ CREATE TABLE IF NOT EXISTS program (
   status_verifikasi    VARCHAR(20)   NOT NULL,
   CONSTRAINT fk_program_penyelenggara FOREIGN KEY (id_penyelenggara)     REFERENCES penyelenggara(id_penyelenggara),
   CONSTRAINT fk_program_admin         FOREIGN KEY (id_admin_verifikator) REFERENCES `user`(id_user),
-  CONSTRAINT chk_program_kategori CHECK (kategori IN ('beasiswa', 'lomba')),
-  CONSTRAINT chk_program_biaya    CHECK (biaya_pendaftaran >= 0),
-  CONSTRAINT chk_program_tanggal  CHECK (tanggal_tutup >= tanggal_mulai),
-  CONSTRAINT chk_program_status   CHECK (status_verifikasi IN ('menunggu', 'terverifikasi', 'ditolak'))
+  CONSTRAINT chk_program_kategori     CHECK (kategori IN ('beasiswa', 'lomba')),
+  CONSTRAINT chk_program_biaya        CHECK (biaya_pendaftaran >= 0),
+  CONSTRAINT chk_program_tanggal      CHECK (tanggal_tutup >= tanggal_mulai),
+  CONSTRAINT chk_program_status       CHECK (status_verifikasi IN ('menunggu', 'terverifikasi', 'ditolak'))
 ) ENGINE=InnoDB;
 
 -- ---------- 6. jenjang ----------
--- Isi contoh: SD, SMP, SMA, D2, D3, S1, S2, Fresh-Graduate
 CREATE TABLE IF NOT EXISTS jenjang (
   id_jenjang   INT AUTO_INCREMENT PRIMARY KEY,
   nama_jenjang VARCHAR(50) NOT NULL UNIQUE
 ) ENGINE=InnoDB;
 
--- ---------- 7. program_jenjang (tabel jembatan M:N) ----------
+-- ---------- 7. program_jenjang ----------
 CREATE TABLE IF NOT EXISTS program_jenjang (
   id_program INT NOT NULL,
   id_jenjang INT NOT NULL,
@@ -121,10 +117,10 @@ CREATE TABLE IF NOT EXISTS analisis_risiko (
   kategori_risiko     VARCHAR(30)  NOT NULL,
   ringkasan_indikator TEXT         NOT NULL,
   tanggal_analisis    DATETIME     NOT NULL,
-  CONSTRAINT fk_analisis_user FOREIGN KEY (id_user) REFERENCES `user`(id_user),
-  CONSTRAINT chk_analisis_skor CHECK (skor_risiko BETWEEN 0 AND 100),
+  CONSTRAINT fk_analisis_user      FOREIGN KEY (id_user) REFERENCES `user`(id_user),
+  CONSTRAINT chk_analisis_skor     CHECK (skor_risiko BETWEEN 0 AND 100),
   CONSTRAINT chk_analisis_kategori CHECK (kategori_risiko IN ('rendah', 'sedang', 'tinggi')),
-  CONSTRAINT chk_analisis_input CHECK (
+  CONSTRAINT chk_analisis_input    CHECK (
     tautan_diperiksa IS NOT NULL OR poster_diperiksa IS NOT NULL OR teks_pengumuman IS NOT NULL
   )
 ) ENGINE=InnoDB;
@@ -139,5 +135,6 @@ CREATE TABLE IF NOT EXISTS sesi_mentoring (
   tautan_meeting   VARCHAR(255) NULL,
   status_sesi      VARCHAR(20)  NOT NULL,
   CONSTRAINT fk_sesi_user          FOREIGN KEY (id_user)          REFERENCES `user`(id_user),
-  CONSTRAINT fk_sesi_penyelenggara FOREIGN KEY (id_penyelenggara) REFERENCES penyelenggara(id_penyelenggara)
+  CONSTRAINT fk_sesi_penyelenggara FOREIGN KEY (id_penyelenggara) REFERENCES penyelenggara(id_penyelenggara),
+  CONSTRAINT chk_sesi_status       CHECK (status_sesi IN ('menunggu', 'terjadwal', 'selesai', 'dibatalkan'))
 ) ENGINE=InnoDB;
