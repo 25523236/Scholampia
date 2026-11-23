@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS program (
 -- Isi contoh: SD, SMP, SMA, D2, D3, S1, S2, Fresh-Graduate
 CREATE TABLE IF NOT EXISTS jenjang (
   id_jenjang   INT AUTO_INCREMENT PRIMARY KEY,
-  nama_jenjang VARCHAR(30) NOT NULL UNIQUE
+  nama_jenjang VARCHAR(50) NOT NULL UNIQUE
 ) ENGINE=InnoDB;
 
 -- ---------- 7. program_jenjang (tabel jembatan M:N) ----------
