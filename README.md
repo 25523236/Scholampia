@@ -18,7 +18,9 @@ Maraknya penyelenggaraan beasiswa dan perlombaan palsu/bodong yang bertujuan mer
 ## 3. Pelaku (Aktor / Pengguna)
 * **Pengguna Umum (Guest/Free User):** Mahasiswa atau pelajar yang mencari katalog informasi beasiswa/lomba terverifikasi dan mengakses artikel edukasi anti-scam.
 * **Pengguna Berbayar (Subscriber):** Mahasiswa atau pelajar yang berlangganan fitur premium untuk menggunakan AI Risk Checker dan memesan sesi mentorship.
-* **Penyelenggara / Mentor:** Pihak penyedia beasiswa/lomba atau alumni yang mengajukan data informasi serta mengisi sesi pendampingan/mentoring.
+* **Penyelenggara/Mentor:** Pihak penyedia beasiswa/lomba atau alumni yang mengajukan data informasi serta mengisi sesi pendampingan/mentoring.
+  Penyelenggara/mentor tidak mengelola data sendiri di sistem. Jika login, mereka masuk sebagai pengguna biasa.
+  Pengajuan program dan jadwal mentoring dikirim ke admin di luar web, lalu admin yang memverifikasi dan menginputnya.
 * **Administrator System:** Pengelola platform yang bertugas memverifikasi kelayakan informasi beasiswa/lomba serta mengelola konten platform.
 
 ## 4. Anggota Kelompok
